@@ -1,0 +1,154 @@
+/* Start Global Rules */
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* End Global Rules */
+
+.main {
+    background-image: url(../images/bg-pattern-top-desktop.svg);
+    background-size: cover;
+}
+
+@media (min-width:375px) and (max-width:991px) {
+    .main {
+        text-align: center;
+    }
+}
+
+@media (min-width:992px) {
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .main .first {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        gap: 150px;
+    }
+}
+
+@media (width:1024px) {
+    .main .first {
+        gap: 0;
+    }
+}
+
+.main .first .content h1 {
+    color: hsl(300, 43%, 22%);
+    font-weight: bold;
+    font-size: 51px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.main .first .content p {
+    color: hsl(303, 10%, 53%)
+}
+
+.main .first .stars {
+    padding-top: 50px;
+}
+
+.main .first .stars .star {
+    margin-bottom: 20px;
+    background-color: hsl(300, 24%, 96%);
+    padding: 20px 30px;
+    border-radius: 15px;
+}
+
+.main .first .stars .star span {
+    margin-left: 25px;
+    color: hsl(300, 43%, 22%);
+    font-weight: bold;
+}
+
+@media (min-width:375px) and (max-width:991px) {
+    .main .first .stars .star span {
+        display: block;
+    }
+}
+
+@media (min-width:992px) {
+    .main .first .stars .star:first-child {
+        transform: translateX(-30px);
+    }
+    .main .first .stars .star:last-child {
+        transform: translateX(50px);
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+.main .cards .card {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 15px;
+    padding: 25px 35px;
+}
+
+.main .cards .card img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.main .cards .card>div {
+    display: flex;
+}
+
+.main .cards .card .id {
+    font-size: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.main .cards .card .id h2 {
+    color: white;
+}
+
+.main .cards .card .id span {
+    display: block;
+    color: hsl(333, 80%, 67%);
+}
+
+.main .cards .card p {
+    color: white;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+@media (min-width:375px) and (max-width:991px) {
+    .cards .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width:992px) {
+    .cards .card:nth-child(2) {
+        transform: translateY(25px);
+    }
+    .cards .card:last-child {
+        transform: translateY(50px);
+    }
+}
