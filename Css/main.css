@@ -107,7 +107,11 @@ body {
     border-radius: 15px;
     padding: 25px 35px;
 }
-
+@media (max-width:767px){
+    .main .cards .card:not(:last-child){
+        margin-bottom:10px;
+    }
+}
 .main .cards .card img {
     border-radius: 50%;
     width: 50px;
